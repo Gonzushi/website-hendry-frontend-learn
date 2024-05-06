@@ -1,0 +1,50 @@
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+@media (min-width: 720px) {
+  .col-1-5 {
+    width: 190px;
+  }
+}
+
+.mantine-a5v3r0 {
+  position: sticky;
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+.img-select {
+  transform: scale(1.1);
+  opacity: 1;
+  transition: opacity 0.4s, transform 0.4s
+}
+
+.img-select:hover {
+  transform: scale(1.03);
+  opacity: 0.9;
+  transition: opacity 0.4s, transform 0.4s
+}
+
+/* input.form-control,
+div.select__control  */
+
+input.form-control,
+textarea.form-control {
+  border-color: rgb(204, 204, 204)
+}
