@@ -5,7 +5,7 @@
 // const frontEnd = 'https://icy-bush-0d6b97910.5.azurestaticapps.net'
 // const frontEnd = 'https://jolly-ground-0c72ff50f.5.azurestaticapps.net'
 
-const abbottLink = 'https://abbottecho.my.salesforce.com/'
-const API = process.env.API
+const abbottLink = "https://abbottecho.my.salesforce.com/";
+const API = "https://abbottppg.azurewebsites.net";
 
-export { API , abbottLink }
+export { API, abbottLink };
