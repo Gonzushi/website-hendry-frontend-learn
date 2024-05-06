@@ -52,57 +52,6 @@ function Article() {
     setState(selection);
   };
 
-  const field = (
-    className: any,
-    label: any,
-    id: any,
-    state: any,
-    setState: any,
-    fieldAPI: any
-  ) => {
-    const [isLoading, setIsLoading] = useState(true);
-    const [dataList, setDataList]: any[] = useState([]);
-
-    const loadOption = (field: "") => {
-      const requestLink = API + "/fields/" + field;
-      const dataListTemp: any[] = [];
-
-      useEffect(() => {
-        fetch(requestLink, { method: "GET" })
-          .then((response) => response.json())
-          .then((response) => {
-            for (const data of response.records) {
-              dataListTemp.push({ value: data, label: data });
-            }
-          })
-          .then(() => {
-            setDataList(dataListTemp);
-            setIsLoading(false);
-          });
-      }, []);
-    };
-
-    loadOption(fieldAPI);
-
-    return (
-      <div className={className}>
-        <label className="form-label">{label}</label>
-        <Select
-          id={id}
-          className="basic-multi-select"
-          classNamePrefix="select"
-          value={state}
-          isMulti
-          closeMenuOnSelect={true}
-          isLoading={isLoading}
-          components={animatedComponents}
-          options={dataList}
-          onChange={(e) => updateSelection(e, setState)}
-        />
-      </div>
-    );
-  };
-
   const isValidated = () => {
     if (
       isNaN(Date.parse(startDateFilter)) == true ||

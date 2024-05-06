@@ -1,8 +1,6 @@
 import Link from "next/link";
 import AbbottLogo from "@/src/Assets/abbott_logo_2.png";
 import Image from "next/image";
-import { redirect } from "react-router-dom";
-
 function NavBar() {
   return (
     <nav className="navbar bg-body-tertiary border-bottom flex justify-between">

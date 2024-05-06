@@ -1,7 +1,6 @@
 import Select, { components } from 'react-select';
 import { Controller } from 'react-hook-form';
-import { API } from "../Setting.tsx";
-import { getCookie } from "../Components/Cookie.tsx";
+import { API } from "@/src/Setting";
 import { useState, useEffect } from "react";
 import { createFilter } from 'react-select';
 
@@ -9,12 +8,10 @@ let render = 0
 function SingleSelectFilingComplaintMultiFieldFetch(className: string, label: string, apiField: string, control: any, storeLocation: any) {
     const [options, setOptions] = useState([])
     const [isLoading, setIsLoading] = useState(true)
-    const sessionId = getCookie('session_id')
-    const headers = { 'Authorization': 'Bearer ' + sessionId };
     const requestLink = API + '/multi_fields/' + apiField
 
     useEffect(() => {
-        fetch(requestLink, { method: "GET", headers: headers })
+        fetch(requestLink, { method: "GET" })
             .then(response => response.json())
             .then(records => {
                 let dataTransform: any[] = []
