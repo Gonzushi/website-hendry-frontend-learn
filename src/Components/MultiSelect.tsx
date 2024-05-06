@@ -31,6 +31,7 @@ function MultiSelect(
         setData(dataListTemp);
         setIsLoading(false);
       });
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const updateSelectedFilter = (eventList: any, setState: any) => {
