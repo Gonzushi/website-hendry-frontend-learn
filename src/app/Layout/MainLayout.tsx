@@ -9,7 +9,7 @@ function MainLayout({ children }: { children: any }) {
         {/* <div id="sideBar" className="col-md-2 collapse collapse-horizontal border-end">
                     <SideBar />
                 </div> */}
-        <div className="ms-4 me-4 mt-4 container-fluid">{children}</div>
+        <div className="ms-1 me-1 mt-4 container-fluid">{children}</div>
       </div>
     </div>
   );
