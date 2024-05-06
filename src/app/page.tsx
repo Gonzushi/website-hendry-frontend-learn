@@ -12,11 +12,11 @@ function Home() {
     <MainLayout>
       <div className="">
         <br />
-        <div className="text-center mt-8 font-semibold">
+        <div className="col-md-12 text-center mt-5">
           <h1>Abbott PPG App</h1>
         </div>
         <br />
-        <div className="d-flex justify-content-center">
+        <div className="col-md-12 text-center mt-3">
           <Link href="/eumir">
             <Image
               className="img-select mx-3 my-3"
